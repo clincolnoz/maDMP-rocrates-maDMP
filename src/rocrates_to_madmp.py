@@ -339,7 +339,7 @@ def rocrates_to_madmp(path, path_schema, mappings, dmp_identifier):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-path', '--path', type=str, required=True, help='path to maDMP file. Also where manifest will be written')   
+    parser.add_argument('-path', '--path', type=str, required=True, help='root path to search for rocrates')   
     parser.add_argument('-path_schema', '--path_schema',
                         type=str,
                         default='https://raw.githubusercontent.com/RDA-DMP-Common/RDA-DMP-Common-Standard/master/examples/JSON/JSON-schema/1.0/maDMP-schema-1.0.json',

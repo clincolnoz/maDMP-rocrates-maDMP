@@ -4,13 +4,14 @@
 
 ## Task description
 
-RO-Crate[5][5]
+RO-Crate[5]
 is a community effort to establish a lightweight approach to packaging research data with
 their metadata. It is based on schema.org annotations in JSON-LD, and aims to make best-practice in
 formal metadata description accessible and practical for use in a wider variety of situations, from an
 individual researcher working with a folder of data, to large data-intensive computational research
 environments.
-Machine-actionable DMPs[6][6]
+
+Machine-actionable DMPs[6]
 (maDMPs) are an emerging standard for exchange of DMPs between
 systems involved in research data management. There are certain overlaps in the scope of maDMPs
 and ro-crates. Reuse and transfer of information between the maDMPs and ro-crates can facilitate
@@ -31,7 +32,37 @@ To test your mapping and the tool, you will:
 Don’t forget to validate the generated maDMPs against the provided JSON schema. The mapping must
 be as complete as possible.
 
-[5]: <https://researchobject.github.io/ro-crate/>  
-[6]: https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard  
-[7]: https://zenodo.org/communities/tuw-dmps-ds-2020/  
-[8]: https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard/tree/master/examples/JSON  
+[5] https://researchobject.github.io/ro-crate/  
+[6] https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard  
+[7] https://zenodo.org/communities/tuw-dmps-ds-2020/  
+[8] https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard/tree/master/examples/JSON  
+
+## Prerequisites
+developed using python 3.7.5
+```bash
+# create environment
+python -m venv datasteward_venv
+
+# install requirements
+pip install -r requirements.txt
+```
+
+## Running scripts and examples
+**core scripts**
+To convert a dmp to multiple rocrates:  
+```bash
+python src/madmp_to_rocrates.py -path <path to madmp file> [-path_schema <url to RDA-DMP-Common-Standard schema>]
+```
+To convert rocrates to maDMP:
+```bash
+python src/rocrates_to_madmp.py -path <root path to search for rocrates> [-path_schema <url to RDA-DMP-Common-Standard schema>] [-dmp_identifier <madmp unique identifier>]
+```
+To compare the 2 maDMP's
+```bash
+python src/compare_dictionaries.py -path_d1 <path to dict 1> -path_d2 <path to dict 2> [-path_report <path where comparison report is saved>]
+```
+
+**examples**
+A jupyter notebook (notebooks/run_examples.ipynb) runs several examples of converting maDMP to rcrates and back as well as rocrate to DMP
+
+## Implementation
