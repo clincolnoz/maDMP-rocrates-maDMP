@@ -43,6 +43,9 @@ developed using python 3.7.5
 # create environment
 python -m venv datasteward_venv
 
+# activate venv
+source datasteward_venv/bin/activate
+
 # install requirements
 pip install -r requirements.txt
 ```
