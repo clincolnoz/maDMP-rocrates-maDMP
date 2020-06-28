@@ -1,0 +1,66 @@
+{
+    "dmp": {
+        "title": "DMP created from rocrates",
+        "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
+        "dmp_id": {
+            "identifier": "",
+            "type": "other"
+        },
+        "modified": "2019-02-13",
+        "contributor": [
+            {
+                "contributor_id": {
+                    "identifier": "https://orcid.org/0000-0001-9842-9718",
+                    "type": "orcid"
+                },
+                "mbox": "soiland-reyes@manchester.ac.uk",
+                "name": "Stian Soiland-Reyes",
+                "role": [
+                    ""
+                ]
+            }
+        ],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "976287d8886dbc477272976658598b1764493a3e",
+                    "type": "other"
+                },
+                "title": "Dataset of repository sizes in CWL Viewer",
+                "description": "This is a simple dataset showing the size in bytes of the repositories examined by https://view.commonwl.org/ sinze September 2018",
+                "keyword": [
+                    "CWL",
+                    "repository",
+                    "example"
+                ],
+                "distribution": [
+                    {
+                        "title": "data/repository-sizes.tsv",
+                        "description": "Tab-separated file. Executed du -s * on heater.cs.man.ac.uk:/data/git",
+                        "data_access": "closed"
+                    },
+                    {
+                        "title": "data/repository-sizes.ods",
+                        "description": "OpenOffice spreadsheet that generates a chart. Imported from TSV.",
+                        "data_access": "closed"
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            }
+        ],
+        "contact": {
+            "mbox": "soiland-reyes@manchester.ac.uk",
+            "name": "Stian Soiland-Reyes",
+            "role": [
+                ""
+            ],
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0001-9842-9718",
+                "type": "orcid"
+            }
+        },
+        "ethical_issues_exist": "unknown",
+        "language": "eng"
+    }
+}
