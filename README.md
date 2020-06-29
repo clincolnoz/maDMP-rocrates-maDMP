@@ -51,7 +51,7 @@ pip install -r requirements.txt
 ```
 
 ## Running scripts and examples
-**core scripts**
+**core scripts**  
 To convert a dmp to multiple rocrates:  
 ```bash
 python src/madmp_to_rocrates.py -path <path to madmp file> [-path_schema <url to RDA-DMP-Common-Standard schema>]
@@ -65,7 +65,7 @@ To compare the 2 maDMP's
 python src/compare_dictionaries.py -path_d1 <path to dict 1> -path_d2 <path to dict 2> [-path_report <path where comparison report is saved>]
 ```
 
-**examples**
+**examples**  
 A jupyter notebook (notebooks/run_examples.ipynb) runs several examples of converting maDMP to rcrates and back as well as rocrate to DMP
 
 ## Implementation
