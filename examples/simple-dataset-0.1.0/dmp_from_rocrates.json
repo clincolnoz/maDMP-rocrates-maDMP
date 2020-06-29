@@ -3,7 +3,7 @@
         "title": "DMP created from rocrates",
         "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
         "dmp_id": {
-            "identifier": "",
+            "identifier": "https://doi.org/10.0000/00.0.1234",
             "type": "other"
         },
         "modified": "2019-02-13",

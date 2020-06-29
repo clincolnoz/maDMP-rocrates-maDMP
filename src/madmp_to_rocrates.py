@@ -45,7 +45,7 @@ def write_rocrates(path, rocrates):
         path_manifest = os.path.join(path_root, 'dataset_{}'.format(i))
         if not os.path.isdir(path_manifest):
             os.mkdir(path_manifest)
-        write_json_local(os.path.join(path_manifest, 'manifest.jsonld'), rocrate)
+        write_json_local(os.path.join(path_manifest, 'ro-crate-metadata.jsonld'), rocrate)
 
         
 def check_valid_dmp(dmp, schema):
@@ -100,6 +100,8 @@ def nested_set(dic, keys, value, create_missing=True):
 def parse_mapping(d, mapping):
     d_out = {}
     for k, v in mapping.items():
+        if k[-1]=='§':
+            k = k.replace('§', '')
         if isinstance(v, dict):
             d_out = add_entry_from_value(d_out, v)
             continue
@@ -152,11 +154,29 @@ def add_entry_from_value(d, value_dict):
         d = nested_set(d, k, v)
     return d
 
-rocrate_header = {
-        "@context": ["http://schema.org", "https://w3id.org/bundle/context"],
-        "@type": ["ro:ResearchObject", "Dataset"],
-        "@id": ".",
+rocrate_top_top = {
+    "@context": "https://w3id.org/ro/crate/1.0/context", 
+    "@graph": [{
+    "@id": "ro-crate-metadata.jsonld",
+    "identifier": "ro-crate-metadata.jsonld",
+    "@type": "CreativeWork",
+    "conformsTo": {
+      "@id": "https://w3id.org/ro/crate/1.0"
+    },
+    "about": {
+      "@id": "./"
+    },
+    "license": {
+      "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
     }
+}],
+}
+
+rocrate_header = {
+        "@id": "./",
+        "@type": "Dataset",
+    }
+
 
 role_value_mapping = {
     'contributor_id::identifier': '@id',
@@ -166,6 +186,7 @@ role_value_mapping = {
 
 contributor_mapping = {
     'contributor_id::identifier': '@id',
+    '_': {'@type': 'Person'},
     #'contributor_id::type': 'type',
     'mbox': 'email',
     'name': 'name',
@@ -173,7 +194,9 @@ contributor_mapping = {
 }
 
 contact_mapping = {
-    'contact_id::identifier': '@id',
+    'mbox§': '@id',
+    'contact_id::identifier': 'url',
+    '_': {'@type': 'ContactPoint'},
     #'contact_id::type': 'type',
     'mbox': 'email',
     'name': 'name'
@@ -211,7 +234,7 @@ dmp_header_to_dataset_mapping = {
     'created': 'dateCreated',
     'modified': 'datePublished',
     'contact': ['contactPoint', contact_mapping],
-    'contributor': ['creator', contributor_mapping],
+    'contributor': ['author', contributor_mapping],
     'cost': ['cost', cost_mapping],
     '_': {'ethicsPolicy::@type': 'CreativeWork'},
     'ethical_issues_exist': 'ethicsPolicy::ethical_issues_exist',
@@ -240,11 +263,12 @@ licence_mapping = {
 
 distribution_mapping = {
     'title': '@id',
+    'title§': '@type',
     'description': 'description',
     'byte_size': 'contentSize',
     'format': ['encodingFormat', None],
     '_': {'data_access::@type': 'ActiveActionStatus'},
-    'data_access': 'data_access::descrition',
+    'data_access': 'data_access::description',
     'host': ['contentLocation', host_mapping],
     'license': ['license', licence_mapping],
     'available_until': 'endDate',
@@ -252,29 +276,31 @@ distribution_mapping = {
 
 
 dataset_mapping = {
-    '_': {'@id': '.'},
+    #'_': {'@id': '.'},
     'dataset_id::identifier': 'identifier',
     'title': 'name',
     'description': 'description',
     'type': 'contentType',
     'keyword': ['keywords', 'list_to_str'],
-    'distribution': ['distribution', distribution_mapping],
+    'distribution': ['hasPart', distribution_mapping],
 }
 
-mappings = (rocrate_header, role_value_mapping, contributor_mapping, contact_mapping,
-           cost_mapping, funder_mapping, project_mapping,
-           dmp_header_to_dataset_mapping, host_mapping, licence_mapping,
-           distribution_mapping, dataset_mapping)
+mappings = (rocrate_top_top,
+            rocrate_header, role_value_mapping, contributor_mapping, contact_mapping,
+            cost_mapping, funder_mapping, project_mapping,
+            dmp_header_to_dataset_mapping, host_mapping, licence_mapping,
+            distribution_mapping, dataset_mapping)
 
 
 def madmp_to_rocrate(path,
                      path_schema,
                      mappings):
     
+    rocrate_top_top, \
     rocrate_header, role_value_mapping, contributor_mapping, contact_mapping, \
-           cost_mapping, funder_mapping, project_mapping, \
-           dmp_header_to_dataset_mapping, host_mapping, licence_mapping, \
-           distribution_mapping, dataset_mapping = mappings
+    cost_mapping, funder_mapping, project_mapping, \
+    dmp_header_to_dataset_mapping, host_mapping, licence_mapping, \
+    distribution_mapping, dataset_mapping = mappings
     
     # read dmp
     dmp = read_json_local(path)
@@ -295,17 +321,20 @@ def madmp_to_rocrate(path,
     for i, dataset in enumerate(dmp_0['dataset']):
         print('processing dataset {} of {} datasets'.format(i+1, n_datasets))
         rocrate_dataset = {}
+        rocrate_out = {}
+        rocrate_out = rocrate_top_top
         rocrate_dataset = parse_mapping(dataset, dataset_mapping)
 
         rocrate_header.update(rocrate_dataset)
         rocrate_header.update(rocrate_dmp_part)
-        rocrates.append(copy.deepcopy(rocrate_header))
+        rocrate_out['@graph'].append(rocrate_header)
+        rocrates.append(copy.deepcopy(rocrate_out))
 
         #print(json.dumps(rocrate_header, indent=4))
         
     # write rocrates to disk
     write_rocrates(path, rocrates)
-
+    return rocrates
 
 
 
@@ -320,4 +349,4 @@ if __name__ == '__main__':
                         help='a url to RDA-DMP-Common schema')   
     args = parser.parse_args()
 
-    madmp_to_rocrate(args.path, args.path_schema, mappings)
+    _ = madmp_to_rocrate(args.path, args.path_schema, mappings)
