@@ -69,3 +69,131 @@ python src/compare_dictionaries.py -path_d1 <path to dict 1> -path_d2 <path to d
 A jupyter notebook (notebooks/run_examples.ipynb) runs several examples of converting maDMP to rcrates and back as well as rocrate to DMP
 
 ## Implementation
+The initial and working implementation used the ro-crate 0.1.0 definitions. Bringing this in line with ro-crate 1.0 is under development in in the development branch. The following references the ro-crate 0.1.0 version.
+
+###Mappings:
+The following uses the syntax:  
+- ```<madmp key(s)>: <rocrate key(s)> ```
+- key1::key2 for nested keys in both read and write columns
+- '-': dict to insert values into rocrate
+- ```<madmp key(s)>: [<rocrate key(s)>, <mappingg for nessted dict>]```
+
+```python
+role_value_mapping = {
+    'contributor_id::identifier': '@id',
+    '_': {'@type': 'Role'},
+    '__': {'name': 'item'}
+}
+
+contributor_mapping = {
+    'contributor_id::identifier': '@id',
+    '_': {'@type': 'Person'},
+    #'contributor_id::type': 'type',
+    'mbox': 'email',
+    'name': 'name',
+    'role': ['roleName', role_value_mapping],
+}
+
+contact_mapping = {
+    'contact_id::identifier': '@id',
+    #'contact_id::type': 'type',
+    'mbox': 'email',
+    'name': 'name'
+}
+
+cost_mapping = {
+    'title': '@id',
+    '_': {'@type': 'Cost'},
+    'currency_code': 'costCurrency',
+    'description': 'description',
+    'value': 'value',
+}
+
+funder_mapping = {  # list
+    'grant_id::identifier': '@id',
+    '_': {'@type': 'Grant'},
+    'funder_id::identifier': 'funder::@id',
+    '__': {'funder::@type': 'Organisation'},
+    'funding_status': 'description',
+}
+
+project_mapping = {
+    "project_id": '@id',  # add ('@type': "Project") after @id 
+    '_': '@type: Project',
+    "title": "name",
+    #"project_id_type": "type",
+    "start": "startDate",  # on top level temporalCoverage = "temporalCoverage_i/temporalCoverage_f"
+    "end": "endDate",
+    "description": "description",
+    "funding": ['funder', funder_mapping],  # list to list
+}
+
+dmp_header_to_dataset_mapping = {
+    'language': 'language',
+    'created': 'dateCreated',
+    'modified': 'datePublished',
+    'contact': ['contactPoint', contact_mapping],
+    'contributor': ['creator', contributor_mapping],
+    'cost': ['cost', cost_mapping],
+    '_': {'ethicsPolicy::@type': 'CreativeWork'},
+    'ethical_issues_exist': 'ethicsPolicy::ethical_issues_exist',
+    'ethical_issues_report': 'ethicsPolicy::ethical_issues_report',
+    'ethical_issues_description': 'ethicsPolicy::ethical_issues_description',
+    'project': ['funder', project_mapping],
+    'available_until': 'endDate',
+}
+
+
+host_mapping = {
+    'title': 'name',
+    'host::url': 'url',
+    '_': {'@type': 'RepositoryCollection'},
+    'description': 'description',
+}
+
+
+licence_mapping = {
+    'license_ref': '@id',
+    '_': {"@type": "CreativeWork"},
+    'license_name': 'name',
+    'start_date': 'startDate'
+}
+
+
+distribution_mapping = {
+    'title': '@id',
+    'description': 'description',
+    'byte_size': 'contentSize',
+    'format': ['encodingFormat', None],
+    '_': {'data_access::@type': 'ActiveActionStatus'},
+    'data_access': 'data_access::descrition',
+    'host': ['contentLocation', host_mapping],
+    'license': ['license', licence_mapping],
+    'available_until': 'endDate',
+}
+
+
+dataset_mapping = {
+    '_': {'@id': '.'},
+    'dataset_id::identifier': 'identifier',
+    'title': 'name',
+    'description': 'description',
+    'type': 'contentType',
+    'keyword': ['keywords', 'list_to_str'],
+    'distribution': ['distribution', distribution_mapping],
+}
+```
+### comments
+The main problems were:
+- ro-crate temporalCoverage as this requires 'start/stop' for the dataset which the dmp doesnt
+- the dmp data_access value doesnt map to an instance or property of ro-crate. The proposed solution was to create a sub dict with the dataset id as @id and add type @ActiveActionStatus plus the dmp value. The ActiveActionStatus is not a good match.
+- ro-crate requires a datePublished for the dataset, which is absent in the dmp but the dmp value modified was used but modified actually refers to teh dmp itself and not the datasets within.
+- the dmp proerties ethical_issues_exist, ethical_issues_report and ethical_issues_description were put in a sub dict with type ethicsPolicy, which was not a terrible fit but refers to an actual policy document and the dmp properties were simple mpoved there 1:1
+- similarly i could not find a ro-crate class or instance that covered the dmp dataset properies peronal_data and sensitive_data. These were omitted.
+- The dmp identifer is also absent from the produced ro-crate as the top level identifier is that of the dataset. The solution for ro-crate to dmp was to have a user input for he dmp identifier, which also makes sense if the task is to convert ro-crates to a dmp where a dmp doesnt exist
+- dmp->dataset->distribution->host geo_location, pid_system and support versioning are absent
+- dmp dataset properties data_quality_assurance, metadata, preservation_statement, security_and_privacy, technical_resource are absent
+- I tried to do it by parsing dicts and lists through the nested structures. This basically will never work and in particular for the flat structure of ro-crate 1.0
+
+## Comments
+Continuing this project would require a complete restructure and essentially create a ro-crate line by line using the values from the dmp, similarly to this <https://github.com/ResearchObject/ro-crate-py>. Similarly, for the ro-crate to dmp. 

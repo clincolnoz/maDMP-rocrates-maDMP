@@ -166,6 +166,7 @@ role_value_mapping = {
 
 contributor_mapping = {
     'contributor_id::identifier': '@id',
+    '_': {'@type': 'Person'},
     #'contributor_id::type': 'type',
     'mbox': 'email',
     'name': 'name',
