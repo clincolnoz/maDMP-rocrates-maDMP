@@ -1,0 +1,47 @@
+dmp->dmp_id:
+ - identifier : https://doi.org/10.5281/zenodo.3737787
+ + identifier : 
+
+dmp->dmp_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id:
+ - title : Finding patterns in the internet's highest rated movies
+ + title : DMP created from rocrates
+
+dmp->dmp_id:
+ - description : The purpose of this experiment is to find out whether or not certain "patterns" can be found in popular movies. Maybe there are certain decades that produced a much higher number of popular movies than others, maybe certain actresses*actors are featured more frequently than others. Are there certain genres which are more popular than the rest? This data could not only be useful for film studios, but also for TV broadcasters or streaming services.
+ + description : a RDA-DMP-Common-Standard maDMP created from rocrate manifests
+
+dmp->dmp_id->contact->dataset_id:
+ - type : url
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+issued as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+language as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+data_quality_assurance as key not in d2
+
+dmp->dmp_id->contact->dataset_id->host:
+support_versioning as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+metadata as key not in d2
+
+dmp->dmp_id->contact->funder_id:
+ - type : url
+ + type : other
+

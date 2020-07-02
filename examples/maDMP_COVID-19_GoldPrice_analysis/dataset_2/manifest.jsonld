@@ -1,0 +1,44 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "https://www.ariva.de/goldpreis-gold-kurs/historische_kurse?boerse_id=130&currency=USD",
+    "name": "Gold prices",
+    "description": "Raw data about the daily Gold price at FXCM market place",
+    "contentType": "csv",
+    "distribution": [
+        {
+            "@id": "Gold prices",
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "open"
+            }
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2020-04-06T18:45:00Z",
+    "datePublished": "2020-04-06T19:32:00Z",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0001-5453-8074",
+        "email": "e1526268@student.tuwien.ac.at",
+        "name": "Ludwig Burtscher"
+    },
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": [
+        {
+            "name": "Data Stewardship UE SS 2020 - Exercise 1",
+            "startDate": "2020-03-09",
+            "endDate": "2020-04-20",
+            "description": "This maDMP is created as an exercise for the Data Stewardship course at TU Wien."
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "dmp": {
+        "title": "DMP created from rocrates",
+        "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
+        "dmp_id": {
+            "identifier": "",
+            "type": "other"
+        },
+        "language": "eng",
+        "created": "2018-07-23T10:10:23.6",
+        "modified": "2019-02-22T15:10:56.9",
+        "contact": {
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0000-0000-0000",
+                "type": "orcid"
+            },
+            "mbox": "TMiksa@sba-research.org",
+            "name": "Tomasz Miksa"
+        },
+        "ethical_issues_exist": "no",
+        "project": [],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "10.5281/zenodo.1200361",
+                    "type": "other"
+                },
+                "title": "Cool data",
+                "description": "Data which shows...",
+                "type": "document",
+                "distribution": [
+                    {
+                        "title": "Raw data",
+                        "description": "CSV file showing...",
+                        "byte_size": 100000,
+                        "format": [
+                            "text/csv"
+                        ],
+                        "data_access": "open",
+                        "host": {
+                            "title": "SuperRepository",
+                            "url": "https://super-repository.org",
+                            "description": "Super repository hosted by super computing centre in a super location"
+                        },
+                        "license": [
+                            {
+                                "license_ref": "https://creativecommons.org/licenses/by/4.0/",
+                                "start_date": "2021-06-30"
+                            }
+                        ],
+                        "available_until": "2029-01-30"
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            }
+        ]
+    }
+}

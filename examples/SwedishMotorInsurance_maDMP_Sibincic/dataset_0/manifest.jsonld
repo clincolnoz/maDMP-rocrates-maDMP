@@ -1,0 +1,83 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "https://www.kaggle.com/floser/swedish-motor-insurance",
+    "name": "Swedish Motor Insurance",
+    "description": "These data were compiled by the Swedish Committee on the Analysis of Risk Premium in Motor Insurance, summarized in Hallin and Ingenbleek (1983) and Andrews and Herzberg (1985). The data are cross-sectional, describing third party automobile insurance claims for the year 1977.",
+    "contentType": "software",
+    "keywords": "swedish, motor, insurance",
+    "distribution": [
+        {
+            "@id": "SwedishMotorInsurance",
+            "contentSize": 60000000,
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "open"
+            },
+            "contentLocation": {
+                "name": "GitHub",
+                "url": "https://github.com/aleksandarsibincic/SwedishMotorInsurance_LinearRegression",
+                "@type": "RepositoryCollection"
+            },
+            "license": [
+                {
+                    "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-04-15"
+                }
+            ]
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2020-04-15T20:00:00.000Z",
+    "datePublished": "2020-04-16T18:49:00.000Z",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0002-4844-6306",
+        "email": "sibincic.aleksandar@gmail.com",
+        "name": "Sibincic Aleksandar"
+    },
+    "creator": [
+        {
+            "@id": "https://orcid.org/0000-0002-4844-6306",
+            "email": "sibincic.aleksandar@gmail.com",
+            "name": "Sibincic Aleksandar",
+            "roleName": [
+                {
+                    "@id": "https://orcid.org/0000-0002-4844-6306",
+                    "@type": "Role",
+                    "name": "Data Steward"
+                }
+            ]
+        }
+    ],
+    "cost": [],
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": [
+        {
+            "name": "Predicting payments in Swedish Motor Insurance",
+            "startDate": "2020-04-07",
+            "endDate": "2020-04-20",
+            "funder": [
+                {
+                    "@id": "1234567",
+                    "@type": "Grant",
+                    "funder": {
+                        "@id": "http://dx.doi.org/10.13039/100010661",
+                        "@type": "Organisation"
+                    },
+                    "description": "applied"
+                }
+            ]
+        }
+    ]
+}

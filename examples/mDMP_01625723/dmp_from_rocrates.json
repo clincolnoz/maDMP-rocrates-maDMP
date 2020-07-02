@@ -1,0 +1,63 @@
+{
+    "dmp": {
+        "title": "DMP created from rocrates",
+        "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
+        "dmp_id": {
+            "identifier": "",
+            "type": "other"
+        },
+        "language": "eng",
+        "created": "2020-04-13T12:00:00.000Z",
+        "modified": "2020-04-13T12:00:00.000Z",
+        "contact": {
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0003-2955-8625",
+                "type": "orcid"
+            },
+            "mbox": "lucas.berent@tuwien.ac.at",
+            "name": "Lucas Berent"
+        },
+        "ethical_issues_exist": "no",
+        "project": [
+            {
+                "project_id": "https://github.com/lucasberent/ds/tree/v1.0.0",
+                "title": "Corona data analysis tool",
+                "start": "2020-03-15",
+                "end": "2020-04-30",
+                "description": "In this project we have implemented a tool for calculating statistical data for a corona virus data set. Several statistics, e.g. top ten countries with most cases worldwide are calculated and displayed visually in interactive plots."
+            }
+        ],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "10.2906/101099100099/1",
+                    "type": "other"
+                },
+                "title": "Sonra\u00ed faoi chor\u00f3inv\u00edreas COVID-19",
+                "description": "",
+                "type": "csv",
+                "distribution": [
+                    {
+                        "title": "Planned distribution",
+                        "format": [],
+                        "data_access": "open",
+                        "host": {
+                            "title": "GitHub",
+                            "url": "https://github.com/lucasberent/ds",
+                            "description": "Mock Experiment for a University Course in Data Stewardship"
+                        },
+                        "license": [
+                            {
+                                "license_ref": "http://opensource.org/licenses/mit-license.php",
+                                "license_name": "The MIT License (MIT)",
+                                "start_date": "2020-03-30"
+                            }
+                        ]
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            }
+        ]
+    }
+}

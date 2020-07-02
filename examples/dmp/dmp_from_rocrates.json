@@ -1,0 +1,129 @@
+{
+    "dmp": {
+        "title": "DMP created from rocrates",
+        "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
+        "dmp_id": {
+            "identifier": "",
+            "type": "other"
+        },
+        "language": "eng",
+        "created": "2020-04-13T22:20:00.0",
+        "modified": "2020-04-20T22:00:00.0",
+        "contact": {
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0002-6867-5448\n",
+                "type": "orcid"
+            },
+            "mbox": "aselzer3@gmail.com",
+            "name": "Alexander Selzer"
+        },
+        "contributor": [
+            {
+                "contributor_id": {
+                    "identifier": "https://orcid.org/0000-0002-6867-5448\n",
+                    "type": "orcid"
+                },
+                "mbox": "aselzer3@gmail.com",
+                "name": "Alexander Selzer",
+                "role": [
+                    "Data Steward",
+                    "Developer",
+                    "QA"
+                ]
+            }
+        ],
+        "cost": [
+            {
+                "title": "Development costs",
+                "currency_code": "EUR",
+                "description": "Costs of development and research are 0 since the project is non-funded",
+                "value": 0
+            },
+            {
+                "title": "Cost of making data FAIR",
+                "currency_code": "EUR",
+                "value": 0
+            }
+        ],
+        "ethical_issues_exist": "no",
+        "project": [
+            {
+                "title": "Hypertree Decompositions for Query Optimization in Postgres",
+                "start": "2019-07-01",
+                "end": "2020-11-01"
+            }
+        ],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "https://github.com/arselzer/HTQueryOptimizer",
+                    "type": "other"
+                },
+                "title": "Source Code",
+                "description": "Proof of concept implementation",
+                "type": "software",
+                "keyword": [
+                    "benchmark",
+                    "data",
+                    "csv",
+                    "json"
+                ],
+                "distribution": [
+                    {
+                        "title": "Java code",
+                        "description": "An implementation of a benchmarking tool and query optimizer as well as benchmark data",
+                        "data_access": "open",
+                        "host": {
+                            "title": "GitHub",
+                            "url": "https://github.com"
+                        },
+                        "license": [
+                            {
+                                "license_ref": "https://opensource.org/licenses/MIT",
+                                "start_date": "2020-01-01"
+                            }
+                        ]
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            },
+            {
+                "dataset_id": {
+                    "identifier": "10.5281/zenodo.3750265",
+                    "type": "other"
+                },
+                "title": "benchmark-results-2020-02-28-12.49.26",
+                "description": "Data produced by a run of the benchmarking tool. Note however that this result is exemplary for the purposes of the exercise and not finally used for the thesis",
+                "type": "data",
+                "keyword": [
+                    "code",
+                    "java",
+                    "python",
+                    "postgres",
+                    "benchmark"
+                ],
+                "distribution": [
+                    {
+                        "title": "Benchmarking Data",
+                        "description": "The benchmark data in a compressed format",
+                        "byte_size": 369028,
+                        "data_access": "open",
+                        "host": {
+                            "title": "GitHub",
+                            "url": "https://github.com"
+                        },
+                        "license": [
+                            {
+                                "license_ref": "https://opensource.org/licenses/MIT",
+                                "start_date": "2020-01-01"
+                            }
+                        ]
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            }
+        ]
+    }
+}

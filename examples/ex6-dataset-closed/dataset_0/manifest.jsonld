@@ -1,0 +1,43 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "10.5281/zenodo.1200361",
+    "name": "Interviews",
+    "description": "Audio recordings of interviews",
+    "contentType": "audio",
+    "distribution": [
+        {
+            "@id": "Collection of recordings",
+            "description": "All interviews with people from...",
+            "contentSize": 6934576883,
+            "encodingFormat": [
+                "audio/mpeg3"
+            ],
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "closed"
+            },
+            "endDate": "2029-01-30"
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2018-07-23T10:10:23.6",
+    "datePublished": "2019-02-22T15:10:56.9",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0000-0000-0000",
+        "email": "TMiksa@sba-research.org",
+        "name": "Tomasz Miksa"
+    },
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": []
+}

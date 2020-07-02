@@ -1,0 +1,83 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "https://www.kaggle.com/bartius/imdb-top-250-movies-info/metadata",
+    "name": "IMDB Top 250 Movies info",
+    "description": "Snapshot of IMDB's top 250 list, scraped in January 2019",
+    "contentType": "software",
+    "keywords": "imdb, top250, movies",
+    "distribution": [
+        {
+            "@id": "IMDB Top 250 Movies info",
+            "contentSize": 72000000,
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "open"
+            },
+            "contentLocation": {
+                "name": "GitHub",
+                "url": "https://github.com/matthiasweiss/dsue1-2020s/",
+                "@type": "RepositoryCollection"
+            },
+            "license": [
+                {
+                    "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-04-02"
+                }
+            ]
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2020-04-02T13:00:00.000Z",
+    "datePublished": "2020-04-02T13:00:00.000Z",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0002-6336-9265",
+        "email": "mail@matthiasweiss.at",
+        "name": "Matthias Wei\u00df"
+    },
+    "creator": [
+        {
+            "@id": "https://orcid.org/0000-0002-6336-9265",
+            "email": "mail@matthiasweiss.at",
+            "name": "Matthias Wei\u00df",
+            "roleName": [
+                {
+                    "@id": "https://orcid.org/0000-0002-6336-9265",
+                    "@type": "Role",
+                    "name": "Data Steward"
+                }
+            ]
+        }
+    ],
+    "cost": [],
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": [
+        {
+            "name": "Finding patterns in the internet's highest rated movies",
+            "startDate": "2020-04-02",
+            "endDate": "2020-04-30",
+            "funder": [
+                {
+                    "@id": "123456",
+                    "@type": "Grant",
+                    "funder": {
+                        "@id": "http://dx.doi.org/10.13039/100010661",
+                        "@type": "Organisation"
+                    },
+                    "description": "applied"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+dmp->dmp_id:
+ - identifier : https://doi.org/10.5281/zenodo.3753030
+ + identifier : 
+
+dmp->dmp_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id:
+ - title : Predicting total payments in Swedish Motor Insurance
+ + title : DMP created from rocrates
+
+dmp->dmp_id:
+ - description : The experiment is based on Swedish Motor Insurance data set which describes third party automobile insurance claims for the year 1977 in Sweden. The goal here was to analyze the data and to perform simple linear regression for the 2 points of interest in this dataset: number of claims (the frequency) and sum of payments (the severity). In order to do that, we had to split the dataset into training and test set, apply predictions in the test set according to a training and to come up with measures for our predictions
+ + description : a RDA-DMP-Common-Standard maDMP created from rocrate manifests
+
+dmp->dmp_id->contact->dataset_id:
+ - type : url
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+issued as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+language as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->dmp_id->contact->dataset_id->host:
+support_versioning as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+metadata as key not in d2
+
+dmp->dmp_id->contact->funder_id:
+ - type : url
+ + type : other
+

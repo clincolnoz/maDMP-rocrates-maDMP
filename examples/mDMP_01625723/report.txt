@@ -1,0 +1,43 @@
+dmp:
+ - title : Corona data analysis tool mDMP
+ + title : DMP created from rocrates
+
+dmp:
+ - description : In this project we have implemented a tool for calculating statistical data for a corona virus data set. Several statistics, e.g. top ten countries with most cases worldwide are calculated and displayed visually in interactive plots.
+ + description : a RDA-DMP-Common-Standard maDMP created from rocrate manifests
+
+dmp->dmp_id:
+ - identifier : 10.5281/zenodo.3749776
+ + identifier : 
+
+dmp->dmp_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id->contact:
+project_id_type as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->dmp_id->contact->dataset_id->host:
+host_id_type as key not in d2
+
+dmp->dmp_id->contact->dataset_id->host:
+supports_versioning as key not in d2
+
+dmp->dmp_id->contact->dataset_id->host:
+storage_type as key not in d2
+
+dmp->dmp_id->contact->dataset_id->host:
+pid_system as key not in d2
+

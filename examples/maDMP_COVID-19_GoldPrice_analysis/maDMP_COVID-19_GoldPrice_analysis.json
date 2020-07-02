@@ -1,0 +1,141 @@
+{
+  "dmp": {
+    "title": "COVID-19 Gold Price Analysis",
+    "description": "The current global Corona crisis not only has a huge impact on health systems around the world, but also on the economic situation. Gold is traditionally known to be a go-to asset in times of crisis and uncertainty and its price therefore usually increases when stock indices collapse. However, the Austrian newspaper Kurier recently published an article (https://kurier.at/wirtschaft/coronavirus-verliert-gold-seinen-ruf-als-krisenwaehrung/400787762) claiming that current market activity during the Corona crisis contradicts this theory. They also state that the gold price will stabilize again in the medium term as this also happened on other occasions. This experiment aims at a data-driven approach to make validations of these assumptions easier. The development of the number of Corona cases and deaths in each country over time is compared to the corresponding gold prices. Since we have not yet overcome the current situation, validating assumptions about medium-term consequences on the gold price cannot be made now, but might be with future data.",
+    "language": "eng",
+    "created": "2020-04-06T18:45:00Z",
+    "modified": "2020-04-06T19:32:00Z",
+    "dmp_id": {
+      "identifier": "https://doi.org/10.5281/zenodo.3742227",
+      "type": "doi"
+    },
+    "contact": {
+      "name": "Ludwig Burtscher",
+      "mbox": "e1526268@student.tuwien.ac.at",
+      "contact_id": {
+        "identifier": "https://orcid.org/0000-0001-5453-8074",
+        "type": "orcid"
+      }
+    },
+    "ethical_issues_exist": "no",
+    "project":
+      [
+        {
+          "title": "Data Stewardship UE SS 2020 - Exercise 1",
+          "description": "This maDMP is created as an exercise for the Data Stewardship course at TU Wien.",
+          "start": "2020-03-09",
+          "end": "2020-04-20"
+        }
+      ],
+    "dataset": [
+      {
+        "dataset_id": {
+          "identifier": "https://doi.org/10.5281/zenodo.3741812",
+          "type": "doi"
+        },
+        "title": "Python scripts",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "type": "Source code",
+        "description": "These scripts perform the analysis and produce the output.",
+        "distribution": [
+          {
+            "title": "Python scripts hosted on GitHub",
+            "data_access": "open",
+            "license": [
+              {
+                "license_ref": "https://choosealicense.com/licenses/mit/",
+                "start_date": "2020-04-20"
+              }
+            ],
+            "download_url": "https://github.com/ludwig-burtscher/dss-ex1/releases"
+          }
+        ],
+        "metadata": [
+          {
+            "language": "eng",
+            "metadata_standard_id": {
+              "identifier": "https://dublincore.org/specifications/dublin-core/dcmi-terms/",
+              "type": "url"
+            }
+          }
+        ]
+      },
+      {
+        "dataset_id": {
+          "identifier": "https://doi.org/10.2906/101099100099/1",
+          "type": "doi"
+        },
+        "title": "COVID-19 cases and deaths",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "type": "csv",
+        "description": "Raw data about global COVID-19 infections and deaths",
+        "distribution": [
+          {
+            "title": "COVID-19 cases and deaths",
+            "data_access": "open",
+            "license": [
+              {
+                "license_ref": "https://creativecommons.org/licenses/by/4.0/",
+                "start_date": "2020-02-27"
+              }
+            ],
+            "download_url": "https://data.europa.eu/euodp/data/dataset/covid-19-coronavirus-data/resource/260bbbde-2316-40eb-aec3-7cd7bfc2f590"
+          }
+        ]
+      },
+      {
+        "dataset_id": {
+          "identifier": "https://www.ariva.de/goldpreis-gold-kurs/historische_kurse?boerse_id=130&currency=USD",
+          "type": "url"
+        },
+        "title": "Gold prices",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "type": "csv",
+        "description": "Raw data about the daily Gold price at FXCM market place",
+        "distribution": [
+          {
+            "title": "Gold prices",
+            "data_access": "open",
+            "download_url": "https://www.ariva.de/goldpreis-gold-kurs/historische_kurse?boerse_id=130&currency=USD"
+          }
+        ]
+      },
+      {
+        "dataset_id": {
+          "identifier": "https://doi.org/10.5281/zenodo.3741831",
+          "type": "doi"
+        },
+        "title": "Correlation of COVID-19 cases and the gold price",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "type": "csv",
+        "description": "Computed data about the correlation of COVID-19 cases and the gold price",
+        "distribution": [
+          {
+            "title": "Correlation of COVID-19 cases and the gold price",
+            "data_access": "open",
+            "license": [
+              {
+                "license_ref": "https://creativecommons.org/licenses/by/4.0/",
+                "start_date": "2020-04-20"
+              }
+            ],
+            "download_url": "https://zenodo.org/record/3741832/files/20200406_COVID-19_and_Gold_correlation.zip"
+          }
+        ],
+        "metadata": [
+          {
+            "language": "eng",
+            "metadata_standard_id": {
+              "identifier": "https://dublincore.org/specifications/dublin-core/dcmi-terms/",
+              "type": "url"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

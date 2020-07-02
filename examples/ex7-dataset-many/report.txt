@@ -1,0 +1,48 @@
+dmp:
+ - title : DMP with two datasets
+ + title : DMP created from rocrates
+
+dmp:
+ - description : DMP describing more than one dataset
+ + description : a RDA-DMP-Common-Standard maDMP created from rocrate manifests
+
+dmp->contact->dmp_id:
+ - identifier : https://doi.org/10.0000/00.0.1234
+ + identifier : 
+
+dmp->contact->dmp_id:
+ - type : doi
+ + type : other
+
+dmp->contact->dmp_id:
+issued as key not in d2
+
+dmp->contact->dmp_id->dataset_id:
+ - type : doi
+ + type : other
+
+dmp->contact->dmp_id->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->contact->dmp_id:
+issued as key not in d2
+
+dmp->contact->dmp_id->dataset_id:
+ - type : doi
+ + type : other
+
+dmp->contact->dmp_id->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->contact->dmp_id->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->contact->dmp_id->dataset_id:
+data_quality_assurance as key not in d2
+
+dmp->contact->dmp_id->dataset_id:
+access_url as key not in d2
+

@@ -1,0 +1,48 @@
+{
+    "dmp": {
+        "title": "DMP created from rocrates",
+        "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
+        "dmp_id": {
+            "identifier": "",
+            "type": "other"
+        },
+        "language": "eng",
+        "created": "2018-07-23T10:10:23.6",
+        "modified": "2019-02-22T15:10:56.9",
+        "contact": {
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0000-0000-0000",
+                "type": "orcid"
+            },
+            "mbox": "TMiksa@sba-research.org",
+            "name": "Tomasz Miksa"
+        },
+        "ethical_issues_exist": "no",
+        "project": [],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "10.5281/zenodo.1200361",
+                    "type": "other"
+                },
+                "title": "Interviews",
+                "description": "Audio recordings of interviews",
+                "type": "audio",
+                "distribution": [
+                    {
+                        "title": "Collection of recordings",
+                        "description": "All interviews with people from...",
+                        "byte_size": 6934576883,
+                        "format": [
+                            "audio/mpeg3"
+                        ],
+                        "data_access": "closed",
+                        "available_until": "2029-01-30"
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            }
+        ]
+    }
+}

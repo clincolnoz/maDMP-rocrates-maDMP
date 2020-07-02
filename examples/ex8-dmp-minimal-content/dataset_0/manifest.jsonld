@@ -1,0 +1,25 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "https://doi.org/10.0000/00.0.5678",
+    "name": "Placeholder dataset",
+    "language": "eng",
+    "dateCreated": "2018-07-23T10:10:23.6",
+    "datePublished": "2019-02-06T15:30:42.1",
+    "contactPoint": {
+        "@id": "http://orcid.org/0000-0000-0000-0000",
+        "email": "cc@example.com",
+        "name": "Charlie Chaplin"
+    },
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "unknown"
+    }
+}

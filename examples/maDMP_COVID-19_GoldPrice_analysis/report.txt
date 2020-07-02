@@ -1,0 +1,82 @@
+dmp:
+ - title : COVID-19 Gold Price Analysis
+ + title : DMP created from rocrates
+
+dmp:
+ - description : The current global Corona crisis not only has a huge impact on health systems around the world, but also on the economic situation. Gold is traditionally known to be a go-to asset in times of crisis and uncertainty and its price therefore usually increases when stock indices collapse. However, the Austrian newspaper Kurier recently published an article (https://kurier.at/wirtschaft/coronavirus-verliert-gold-seinen-ruf-als-krisenwaehrung/400787762) claiming that current market activity during the Corona crisis contradicts this theory. They also state that the gold price will stabilize again in the medium term as this also happened on other occasions. This experiment aims at a data-driven approach to make validations of these assumptions easier. The development of the number of Corona cases and deaths in each country over time is compared to the corresponding gold prices. Since we have not yet overcome the current situation, validating assumptions about medium-term consequences on the gold price cannot be made now, but might be with future data.
+ + description : a RDA-DMP-Common-Standard maDMP created from rocrate manifests
+
+dmp->dmp_id:
+ - identifier : https://doi.org/10.5281/zenodo.3742227
+ + identifier : 
+
+dmp->dmp_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+download_url as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+metadata as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+download_url as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+ - type : url
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+download_url as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+ - type : doi
+ + type : other
+
+dmp->dmp_id->contact->dataset_id:
+ - personal_data : no
+ + personal_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+ - sensitive_data : no
+ + sensitive_data : unknown
+
+dmp->dmp_id->contact->dataset_id:
+download_url as key not in d2
+
+dmp->dmp_id->contact->dataset_id:
+metadata as key not in d2
+

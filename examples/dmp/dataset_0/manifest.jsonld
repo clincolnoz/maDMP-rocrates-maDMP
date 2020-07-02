@@ -1,0 +1,96 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "https://github.com/arselzer/HTQueryOptimizer",
+    "name": "Source Code",
+    "description": "Proof of concept implementation",
+    "contentType": "software",
+    "keywords": "benchmark, data, csv, json",
+    "distribution": [
+        {
+            "@id": "Java code",
+            "description": "An implementation of a benchmarking tool and query optimizer as well as benchmark data",
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "open"
+            },
+            "contentLocation": {
+                "name": "GitHub",
+                "url": "https://github.com",
+                "@type": "RepositoryCollection"
+            },
+            "license": [
+                {
+                    "@id": "https://opensource.org/licenses/MIT",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-01-01"
+                }
+            ]
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2020-04-13T22:20:00.0",
+    "datePublished": "2020-04-20T22:00:00.0",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0002-6867-5448\n",
+        "email": "aselzer3@gmail.com",
+        "name": "Alexander Selzer"
+    },
+    "creator": [
+        {
+            "@id": "https://orcid.org/0000-0002-6867-5448\n",
+            "email": "aselzer3@gmail.com",
+            "name": "Alexander Selzer",
+            "roleName": [
+                {
+                    "@id": "https://orcid.org/0000-0002-6867-5448\n",
+                    "@type": "Role",
+                    "name": "Data Steward"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-6867-5448\n",
+                    "@type": "Role",
+                    "name": "Developer"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-6867-5448\n",
+                    "@type": "Role",
+                    "name": "QA"
+                }
+            ]
+        }
+    ],
+    "cost": [
+        {
+            "@id": "Development costs",
+            "@type": "Cost",
+            "costCurrency": "EUR",
+            "description": "Costs of development and research are 0 since the project is non-funded",
+            "value": 0
+        },
+        {
+            "@id": "Cost of making data FAIR",
+            "@type": "Cost",
+            "costCurrency": "EUR",
+            "value": 0
+        }
+    ],
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": [
+        {
+            "name": "Hypertree Decompositions for Query Optimization in Postgres",
+            "startDate": "2019-07-01",
+            "endDate": "2020-11-01"
+        }
+    ]
+}

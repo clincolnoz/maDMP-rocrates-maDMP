@@ -1,0 +1,118 @@
+{
+    "dmp": {
+        "title": "DMP created from rocrates",
+        "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
+        "dmp_id": {
+            "identifier": "",
+            "type": "other"
+        },
+        "language": "eng",
+        "created": "2020-04-06T18:45:00Z",
+        "modified": "2020-04-06T19:32:00Z",
+        "contact": {
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0001-5453-8074",
+                "type": "orcid"
+            },
+            "mbox": "e1526268@student.tuwien.ac.at",
+            "name": "Ludwig Burtscher"
+        },
+        "ethical_issues_exist": "no",
+        "project": [
+            {
+                "title": "Data Stewardship UE SS 2020 - Exercise 1",
+                "start": "2020-03-09",
+                "end": "2020-04-20",
+                "description": "This maDMP is created as an exercise for the Data Stewardship course at TU Wien."
+            }
+        ],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "https://doi.org/10.5281/zenodo.3741812",
+                    "type": "other"
+                },
+                "title": "Python scripts",
+                "description": "These scripts perform the analysis and produce the output.",
+                "type": "Source code",
+                "distribution": [
+                    {
+                        "title": "Python scripts hosted on GitHub",
+                        "data_access": "open",
+                        "license": [
+                            {
+                                "license_ref": "https://choosealicense.com/licenses/mit/",
+                                "start_date": "2020-04-20"
+                            }
+                        ]
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            },
+            {
+                "dataset_id": {
+                    "identifier": "https://doi.org/10.2906/101099100099/1",
+                    "type": "other"
+                },
+                "title": "COVID-19 cases and deaths",
+                "description": "Raw data about global COVID-19 infections and deaths",
+                "type": "csv",
+                "distribution": [
+                    {
+                        "title": "COVID-19 cases and deaths",
+                        "data_access": "open",
+                        "license": [
+                            {
+                                "license_ref": "https://creativecommons.org/licenses/by/4.0/",
+                                "start_date": "2020-02-27"
+                            }
+                        ]
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            },
+            {
+                "dataset_id": {
+                    "identifier": "https://www.ariva.de/goldpreis-gold-kurs/historische_kurse?boerse_id=130&currency=USD",
+                    "type": "other"
+                },
+                "title": "Gold prices",
+                "description": "Raw data about the daily Gold price at FXCM market place",
+                "type": "csv",
+                "distribution": [
+                    {
+                        "title": "Gold prices",
+                        "data_access": "open"
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            },
+            {
+                "dataset_id": {
+                    "identifier": "https://doi.org/10.5281/zenodo.3741831",
+                    "type": "other"
+                },
+                "title": "Correlation of COVID-19 cases and the gold price",
+                "description": "Computed data about the correlation of COVID-19 cases and the gold price",
+                "type": "csv",
+                "distribution": [
+                    {
+                        "title": "Correlation of COVID-19 cases and the gold price",
+                        "data_access": "open",
+                        "license": [
+                            {
+                                "license_ref": "https://creativecommons.org/licenses/by/4.0/",
+                                "start_date": "2020-04-20"
+                            }
+                        ]
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            }
+        ]
+    }
+}

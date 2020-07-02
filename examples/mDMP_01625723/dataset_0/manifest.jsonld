@@ -1,0 +1,60 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "10.2906/101099100099/1",
+    "name": "Sonra\u00ed faoi chor\u00f3inv\u00edreas COVID-19",
+    "description": "",
+    "contentType": "csv",
+    "distribution": [
+        {
+            "@id": "Planned distribution",
+            "encodingFormat": [],
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "open"
+            },
+            "contentLocation": {
+                "name": "GitHub",
+                "url": "https://github.com/lucasberent/ds",
+                "@type": "RepositoryCollection",
+                "description": "Mock Experiment for a University Course in Data Stewardship"
+            },
+            "license": [
+                {
+                    "@id": "http://opensource.org/licenses/mit-license.php",
+                    "@type": "CreativeWork",
+                    "name": "The MIT License (MIT)",
+                    "startDate": "2020-03-30"
+                }
+            ]
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2020-04-13T12:00:00.000Z",
+    "datePublished": "2020-04-13T12:00:00.000Z",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0003-2955-8625",
+        "email": "lucas.berent@tuwien.ac.at",
+        "name": "Lucas Berent"
+    },
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": [
+        {
+            "@id": "https://github.com/lucasberent/ds/tree/v1.0.0",
+            "name": "Corona data analysis tool",
+            "startDate": "2020-03-15",
+            "endDate": "2020-04-30",
+            "description": "In this project we have implemented a tool for calculating statistical data for a corona virus data set. Several statistics, e.g. top ten countries with most cases worldwide are calculated and displayed visually in interactive plots."
+        }
+    ]
+}

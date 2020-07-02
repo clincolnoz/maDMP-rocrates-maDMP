@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "https://doi.org/10.5281/zenodo.3741831",
+    "name": "Correlation of COVID-19 cases and the gold price",
+    "description": "Computed data about the correlation of COVID-19 cases and the gold price",
+    "contentType": "csv",
+    "distribution": [
+        {
+            "@id": "Correlation of COVID-19 cases and the gold price",
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "open"
+            },
+            "license": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-04-20"
+                }
+            ]
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2020-04-06T18:45:00Z",
+    "datePublished": "2020-04-06T19:32:00Z",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0001-5453-8074",
+        "email": "e1526268@student.tuwien.ac.at",
+        "name": "Ludwig Burtscher"
+    },
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": [
+        {
+            "name": "Data Stewardship UE SS 2020 - Exercise 1",
+            "startDate": "2020-03-09",
+            "endDate": "2020-04-20",
+            "description": "This maDMP is created as an exercise for the Data Stewardship course at TU Wien."
+        }
+    ]
+}

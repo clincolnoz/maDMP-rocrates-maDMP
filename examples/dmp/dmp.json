@@ -1,0 +1,125 @@
+{
+	"dmp": {
+		"title": "Hypertree Decompositions for Query Optimization in Postgres",
+		"description": "Development and Benchmark of a new strategy for query execution. The data is collected for the purpose of benchmarking the new, optimized queries and measure the effectiveness of the technique against the default postgres\noptimizer",
+		"created": "2020-04-13T22:20:00.0",
+		"modified": "2020-04-20T22:00:00.0",
+		"project": [
+          {
+            "end": "2020-11-01",
+            "start": "2019-07-01",
+            "title": "Hypertree Decompositions for Query Optimization in Postgres"
+          }
+        ],
+		"contact": {
+			"mbox": "aselzer3@gmail.com",
+			"name": "Alexander Selzer",
+			"contact_id": {
+				"identifier": "https://orcid.org/0000-0002-6867-5448\n",
+				"type": "orcid"
+			}
+		},
+		"contributor": [
+			{
+				"contributor_id": {
+					"identifier": "https://orcid.org/0000-0002-6867-5448\n",
+					"type": "orcid"
+				},
+				"mbox": "aselzer3@gmail.com",
+				"name": "Alexander Selzer",
+				"role": ["Data Steward", "Developer", "QA"]
+			}
+		],
+		"language": "eng",
+		"ethical_issues_exist": "no",
+		"dmp_id": {
+			"identifier": "10.5281/zenodo.3758547",
+			"type": "doi"
+		},
+      "cost": [
+        {
+			"title": "Development costs",
+			"description": "Costs of development and research are 0 since the project is non-funded",
+			"value": 0,
+			"currency_code": "EUR"
+        },
+		  {
+			  "title": "Cost of making data FAIR",
+			  "value": 0,
+			  "currency_code": "EUR"
+		  }
+      ],
+		"dataset": [
+          {
+				"title": "Source Code",
+				"description": "Proof of concept implementation",
+				"type": "software",
+				"issued": "2020-04-13",
+			  	"dataset_id": {
+					"identifier": "https://github.com/arselzer/HTQueryOptimizer",
+					"type": "url"
+				},
+			  "data_quality_assurance": ["Configuration will be simplified as much as sensibly possible and unneeded data is reduced. The number of runs is configurable since the benchmarking is\nperformed on computer hardware where performance can randomly vary. Then outliers can be detected if possible."],
+				"personal_data": "no",
+				"sensitive_data": "no",
+			  "keyword": ["benchmark", "data", "csv", "json"],
+			  "distribution": [
+				  {
+					  "title": "Java code",
+					  "description": "An implementation of a benchmarking tool and query optimizer as well as benchmark data",
+					  "access_url": "https://github.com/arselzer/HTQueryOptimizer",
+					  "data_access": "open",
+					  "license": [
+						  {
+							  "license_ref": "https://opensource.org/licenses/MIT",
+							  "start_date": "2020-01-01"
+						  }
+					  ],
+					  "host": {
+						  "title": "GitHub",
+						  "url": "https://github.com",
+						  "availability": "99.9",
+						  "support_versioning": "yes",
+						  "pid_system": ["url", "doi"]
+					  }
+				  }
+			  ]
+		  },
+			{
+				"dataset_id": {
+					"identifier": "10.5281/zenodo.3750265",
+					"type": "doi"
+				},
+				"personal_data": "no",
+				"sensitive_data": "no",
+				"title": "benchmark-results-2020-02-28-12.49.26",
+				"type": "data",
+				"data_quality_assurance": ["Configuration will be simplified as much as sensibly possible and unneeded data is reduced. The number of runs is configurable since the benchmarking is\nperformed on computer hardware where performance can randomly vary. Then outliers can be detected if possible."],
+				"description": "Data produced by a run of the benchmarking tool. Note however that this result is exemplary for the purposes of the exercise and not finally used for the thesis",
+				"distribution": [
+					{
+						"data_access": "open",
+						"title": "Benchmarking Data",
+						"description": "The benchmark data in a compressed format",
+						"access_url": "https://github.com/arselzer/HTQueryOptimizer/releases/download/2020-02-28/benchmark-results-2020-02-28-12.49.26.tar.xz",
+						"license": [
+							{
+								"license_ref": "https://opensource.org/licenses/MIT",
+								"start_date": "2020-01-01"
+							}
+						],
+						"byte_size": 369028,
+						"host": {
+							"title": "GitHub",
+							"url": "https://github.com",
+							"availability": "99.9",
+							"support_versioning": "yes",
+							"pid_system": ["url", "doi"]
+						}
+					}
+				],
+				"keyword": ["code", "java", "python", "postgres", "benchmark"]
+			}
+		]
+	}
+}

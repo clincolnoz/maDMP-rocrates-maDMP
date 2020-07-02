@@ -1,0 +1,50 @@
+{
+    "@context": [
+        "http://schema.org",
+        "https://w3id.org/bundle/context"
+    ],
+    "@type": [
+        "ro:ResearchObject",
+        "Dataset"
+    ],
+    "@id": ".",
+    "identifier": "10.9876/zenodo.1234567",
+    "name": "Cool data",
+    "description": "Data which shows...",
+    "contentType": "document",
+    "distribution": [
+        {
+            "@id": "Raw data",
+            "description": "CSV file showing...",
+            "contentSize": 100000,
+            "encodingFormat": [
+                "text/csv"
+            ],
+            "data_access": {
+                "@type": "ActiveActionStatus",
+                "descrition": "open"
+            },
+            "license": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/",
+                    "@type": "CreativeWork",
+                    "startDate": "2019-06-30"
+                }
+            ],
+            "endDate": "2029-01-30"
+        }
+    ],
+    "language": "eng",
+    "dateCreated": "2018-07-23T10:10:23.6",
+    "datePublished": "2019-02-22T15:10:56.9",
+    "contactPoint": {
+        "@id": "https://orcid.org/0000-0000-0000-0000",
+        "email": "TMiksa@sba-research.org",
+        "name": "Tomasz Miksa"
+    },
+    "ethicsPolicy": {
+        "@type": "CreativeWork",
+        "ethical_issues_exist": "no"
+    },
+    "funder": []
+}

@@ -1,0 +1,91 @@
+{
+    "dmp": {
+        "title": "DMP created from rocrates",
+        "description": "a RDA-DMP-Common-Standard maDMP created from rocrate manifests",
+        "dmp_id": {
+            "identifier": "",
+            "type": "other"
+        },
+        "language": "eng",
+        "created": "2020-04-02T13:00:00.000Z",
+        "modified": "2020-04-02T13:00:00.000Z",
+        "contact": {
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0002-6336-9265",
+                "type": "orcid"
+            },
+            "mbox": "mail@matthiasweiss.at",
+            "name": "Matthias Wei\u00df"
+        },
+        "contributor": [
+            {
+                "contributor_id": {
+                    "identifier": "https://orcid.org/0000-0002-6336-9265",
+                    "type": "orcid"
+                },
+                "mbox": "mail@matthiasweiss.at",
+                "name": "Matthias Wei\u00df",
+                "role": [
+                    "Data Steward"
+                ]
+            }
+        ],
+        "cost": [],
+        "ethical_issues_exist": "no",
+        "project": [
+            {
+                "title": "Finding patterns in the internet's highest rated movies",
+                "start": "2020-04-02",
+                "end": "2020-04-30",
+                "funding": [
+                    {
+                        "grant_id": {
+                            "identifier": "123456",
+                            "type": "other"
+                        },
+                        "funder_id": {
+                            "identifier": "http://dx.doi.org/10.13039/100010661",
+                            "type": "other"
+                        },
+                        "funding_status": "applied"
+                    }
+                ]
+            }
+        ],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "https://www.kaggle.com/bartius/imdb-top-250-movies-info/metadata",
+                    "type": "other"
+                },
+                "title": "IMDB Top 250 Movies info",
+                "description": "Snapshot of IMDB's top 250 list, scraped in January 2019",
+                "type": "software",
+                "keyword": [
+                    "imdb",
+                    "top250",
+                    "movies"
+                ],
+                "distribution": [
+                    {
+                        "title": "IMDB Top 250 Movies info",
+                        "byte_size": 72000000,
+                        "data_access": "open",
+                        "host": {
+                            "title": "GitHub",
+                            "url": "https://github.com/matthiasweiss/dsue1-2020s/"
+                        },
+                        "license": [
+                            {
+                                "license_ref": "https://creativecommons.org/publicdomain/zero/1.0/",
+                                "start_date": "2020-04-02"
+                            }
+                        ]
+                    }
+                ],
+                "personal_data": "unknown",
+                "sensitive_data": "unknown"
+            }
+        ]
+    }
+}
